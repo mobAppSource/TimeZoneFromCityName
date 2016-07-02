@@ -7,21 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9153DEB44135603B5418A531 /* Pods_TimeZoneFromCityName.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2D756DAE2D5B1D633AC69E5 /* Pods_TimeZoneFromCityName.framework */; };
 		AFDA97591D27E14400B8611B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDA97581D27E14400B8611B /* AppDelegate.swift */; };
-		AFDA975B1D27E14400B8611B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDA975A1D27E14400B8611B /* ViewController.swift */; };
-		AFDA975E1D27E14400B8611B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFDA975C1D27E14400B8611B /* Main.storyboard */; };
 		AFDA97601D27E14400B8611B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFDA975F1D27E14400B8611B /* Assets.xcassets */; };
 		AFDA97631D27E14400B8611B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFDA97611D27E14400B8611B /* LaunchScreen.storyboard */; };
+		AFDA976B1D27E28200B8611B /* CityListTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDA976A1D27E28200B8611B /* CityListTVC.swift */; };
+		AFDA976D1D27E48D00B8611B /* timeZoneList.plist in Resources */ = {isa = PBXBuildFile; fileRef = AFDA976C1D27E48D00B8611B /* timeZoneList.plist */; };
+		AFDA976F1D27E4D300B8611B /* timeZones.txt in Resources */ = {isa = PBXBuildFile; fileRef = AFDA976E1D27E4D300B8611B /* timeZones.txt */; };
+		AFDA97711D27E6C700B8611B /* MainParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDA97701D27E6C700B8611B /* MainParameters.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A061943A9CDEB608B2F53363 /* Pods-TimeZoneFromCityName.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeZoneFromCityName.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TimeZoneFromCityName/Pods-TimeZoneFromCityName.debug.xcconfig"; sourceTree = "<group>"; };
 		AFDA97551D27E14300B8611B /* TimeZoneFromCityName.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeZoneFromCityName.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFDA97581D27E14400B8611B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AFDA975A1D27E14400B8611B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		AFDA975D1D27E14400B8611B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AFDA975F1D27E14400B8611B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AFDA97621D27E14400B8611B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AFDA97641D27E14400B8611B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFDA976A1D27E28200B8611B /* CityListTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityListTVC.swift; sourceTree = "<group>"; };
+		AFDA976C1D27E48D00B8611B /* timeZoneList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = timeZoneList.plist; sourceTree = "<group>"; };
+		AFDA976E1D27E4D300B8611B /* timeZones.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = timeZones.txt; sourceTree = "<group>"; };
+		AFDA97701D27E6C700B8611B /* MainParameters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainParameters.swift; sourceTree = "<group>"; };
+		DC443AD6C043774BC6E78BDC /* Pods-TimeZoneFromCityName.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeZoneFromCityName.release.xcconfig"; path = "Pods/Target Support Files/Pods-TimeZoneFromCityName/Pods-TimeZoneFromCityName.release.xcconfig"; sourceTree = "<group>"; };
+		E2D756DAE2D5B1D633AC69E5 /* Pods_TimeZoneFromCityName.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimeZoneFromCityName.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +37,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9153DEB44135603B5418A531 /* Pods_TimeZoneFromCityName.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6A1295E5616678802571ACCB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E2D756DAE2D5B1D633AC69E5 /* Pods_TimeZoneFromCityName.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AFDA974C1D27E14300B8611B = {
 			isa = PBXGroup;
 			children = (
 				AFDA97571D27E14400B8611B /* TimeZoneFromCityName */,
 				AFDA97561D27E14300B8611B /* Products */,
+				F669892016236CCA97DC40AB /* Pods */,
+				6A1295E5616678802571ACCB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +73,25 @@
 		AFDA97571D27E14400B8611B /* TimeZoneFromCityName */ = {
 			isa = PBXGroup;
 			children = (
+				AFDA976C1D27E48D00B8611B /* timeZoneList.plist */,
+				AFDA976E1D27E4D300B8611B /* timeZones.txt */,
 				AFDA97581D27E14400B8611B /* AppDelegate.swift */,
-				AFDA975A1D27E14400B8611B /* ViewController.swift */,
-				AFDA975C1D27E14400B8611B /* Main.storyboard */,
+				AFDA976A1D27E28200B8611B /* CityListTVC.swift */,
+				AFDA97701D27E6C700B8611B /* MainParameters.swift */,
 				AFDA975F1D27E14400B8611B /* Assets.xcassets */,
 				AFDA97611D27E14400B8611B /* LaunchScreen.storyboard */,
 				AFDA97641D27E14400B8611B /* Info.plist */,
 			);
 			path = TimeZoneFromCityName;
+			sourceTree = "<group>";
+		};
+		F669892016236CCA97DC40AB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A061943A9CDEB608B2F53363 /* Pods-TimeZoneFromCityName.debug.xcconfig */,
+				DC443AD6C043774BC6E78BDC /* Pods-TimeZoneFromCityName.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +101,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AFDA97671D27E14400B8611B /* Build configuration list for PBXNativeTarget "TimeZoneFromCityName" */;
 			buildPhases = (
+				350EC11E307003D25DF717DD /* [CP] Check Pods Manifest.lock */,
 				AFDA97511D27E14300B8611B /* Sources */,
 				AFDA97521D27E14300B8611B /* Frameworks */,
 				AFDA97531D27E14300B8611B /* Resources */,
+				C6DCF822DCF3E02D68885CC1 /* [CP] Embed Pods Frameworks */,
+				0CCEDFD6B158171C0A01FFF6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -123,19 +156,69 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFDA97631D27E14400B8611B /* LaunchScreen.storyboard in Resources */,
+				AFDA976F1D27E4D300B8611B /* timeZones.txt in Resources */,
 				AFDA97601D27E14400B8611B /* Assets.xcassets in Resources */,
-				AFDA975E1D27E14400B8611B /* Main.storyboard in Resources */,
+				AFDA976D1D27E48D00B8611B /* timeZoneList.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0CCEDFD6B158171C0A01FFF6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TimeZoneFromCityName/Pods-TimeZoneFromCityName-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		350EC11E307003D25DF717DD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C6DCF822DCF3E02D68885CC1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TimeZoneFromCityName/Pods-TimeZoneFromCityName-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AFDA97511D27E14300B8611B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFDA975B1D27E14400B8611B /* ViewController.swift in Sources */,
+				AFDA976B1D27E28200B8611B /* CityListTVC.swift in Sources */,
+				AFDA97711D27E6C700B8611B /* MainParameters.swift in Sources */,
 				AFDA97591D27E14400B8611B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,14 +226,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		AFDA975C1D27E14400B8611B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AFDA975D1D27E14400B8611B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		AFDA97611D27E14400B8611B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -199,7 +274,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -239,7 +314,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -249,9 +324,11 @@
 		};
 		AFDA97681D27E14400B8611B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A061943A9CDEB608B2F53363 /* Pods-TimeZoneFromCityName.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TimeZoneFromCityName/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.iCloudTest.TimeZoneFromCityName;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -260,9 +337,11 @@
 		};
 		AFDA97691D27E14400B8611B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC443AD6C043774BC6E78BDC /* Pods-TimeZoneFromCityName.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TimeZoneFromCityName/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.iCloudTest.TimeZoneFromCityName;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -288,6 +367,7 @@
 				AFDA97691D27E14400B8611B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
