@@ -10,3 +10,8 @@ import Foundation
 import UIKit
 
 var myDicData: NSDictionary?
+
+let wView: CGFloat = UIScreen.mainScreen().bounds.width
+let hView: CGFloat = UIScreen.mainScreen().bounds.height
+
+

@@ -15,12 +15,12 @@ func getTimeFromCityName(city_name: String) -> String
     var retString: String!
     let locTime = NSDate()
     let formatter = NSDateFormatter()
-    formatter.dateFormat = "HH:mm"
+    formatter.dateFormat = "HH:mm:ss"
     
     if let cityTimeZone = NSTimeZone(name: city_name){
         formatter.timeZone = cityTimeZone
     }
-    formatter.timeStyle = .ShortStyle
+    formatter.timeStyle = .MediumStyle
     retString = formatter.stringFromDate(locTime)
     return retString
 }
@@ -29,7 +29,7 @@ func getTimeFromCityName(city_name: String) -> String
 func getLocalTime() -> String
 {
     let timeFormatter = NSDateFormatter()
-    timeFormatter.dateFormat = "HH:mm"
-    timeFormatter.timeStyle = .ShortStyle
+    timeFormatter.dateFormat = "HH:mm:ss"
+    timeFormatter.timeStyle = .MediumStyle
     return timeFormatter.stringFromDate(NSDate())
 }
