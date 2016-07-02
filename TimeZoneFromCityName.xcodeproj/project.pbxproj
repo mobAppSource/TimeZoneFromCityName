@@ -15,6 +15,7 @@
 		AFDA976D1D27E48D00B8611B /* timeZoneList.plist in Resources */ = {isa = PBXBuildFile; fileRef = AFDA976C1D27E48D00B8611B /* timeZoneList.plist */; };
 		AFDA976F1D27E4D300B8611B /* timeZones.txt in Resources */ = {isa = PBXBuildFile; fileRef = AFDA976E1D27E4D300B8611B /* timeZones.txt */; };
 		AFDA97711D27E6C700B8611B /* MainParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDA97701D27E6C700B8611B /* MainParameters.swift */; };
+		AFDA97731D2810DD00B8611B /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDA97721D2810DD00B8611B /* Utilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		AFDA976C1D27E48D00B8611B /* timeZoneList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = timeZoneList.plist; sourceTree = "<group>"; };
 		AFDA976E1D27E4D300B8611B /* timeZones.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = timeZones.txt; sourceTree = "<group>"; };
 		AFDA97701D27E6C700B8611B /* MainParameters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainParameters.swift; sourceTree = "<group>"; };
+		AFDA97721D2810DD00B8611B /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		DC443AD6C043774BC6E78BDC /* Pods-TimeZoneFromCityName.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeZoneFromCityName.release.xcconfig"; path = "Pods/Target Support Files/Pods-TimeZoneFromCityName/Pods-TimeZoneFromCityName.release.xcconfig"; sourceTree = "<group>"; };
 		E2D756DAE2D5B1D633AC69E5 /* Pods_TimeZoneFromCityName.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimeZoneFromCityName.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -78,6 +80,7 @@
 				AFDA97581D27E14400B8611B /* AppDelegate.swift */,
 				AFDA976A1D27E28200B8611B /* CityListTVC.swift */,
 				AFDA97701D27E6C700B8611B /* MainParameters.swift */,
+				AFDA97721D2810DD00B8611B /* Utilities.swift */,
 				AFDA975F1D27E14400B8611B /* Assets.xcassets */,
 				AFDA97611D27E14400B8611B /* LaunchScreen.storyboard */,
 				AFDA97641D27E14400B8611B /* Info.plist */,
@@ -219,6 +222,7 @@
 			files = (
 				AFDA976B1D27E28200B8611B /* CityListTVC.swift in Sources */,
 				AFDA97711D27E6C700B8611B /* MainParameters.swift in Sources */,
+				AFDA97731D2810DD00B8611B /* Utilities.swift in Sources */,
 				AFDA97591D27E14400B8611B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

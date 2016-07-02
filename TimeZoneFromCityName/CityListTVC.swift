@@ -22,13 +22,17 @@ class CityListTVC: UITableViewController {
         self.tableView.registerClass(cityCell.self, forCellReuseIdentifier: cellID)
         
         self.readData()
+        self.dispLocTime()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func dispLocTime()
+    {
+        let locTimeLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 60, height: 20))
+        locTimeLabel.text = getLocalTime()
+        locTimeLabel.textAlignment = .Right
+        locTimeLabel.font = UIFont.systemFontOfSize(12)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: locTimeLabel)
     }
-
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -62,6 +66,7 @@ class CityListTVC: UITableViewController {
             {
                 let strArr = timezone.description.componentsSeparatedByString(" ")
                 cell.timeZone.text = strArr[1]
+                cell.curTime.text = getTimeFromCityName(cityNames[indexPath.row][1])
             }
         }
         return cell
@@ -69,51 +74,6 @@ class CityListTVC: UITableViewController {
     override func tableView(tableView: UITableView, titleForFooterInSection section: Int) -> String? {
         return "Total \(cityNames.count) cities"
     }
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
 extension CityListTVC{
@@ -186,17 +146,28 @@ class cityCell: UITableViewCell{
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
+    let curTime: UILabel = {
+        let label = UILabel()
+        label.textAlignment = .Right
+        label.textColor = UIColor.blackColor()
+        label.font = UIFont.systemFontOfSize(15)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
     
     func setupViews()
     {
         addSubview(cityName)
         addSubview(cityAddrName)
         addSubview(timeZone)
+        addSubview(curTime)
+        
         addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|-16-[v0]", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": cityName]))
         addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|-16-[v0]", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": cityAddrName]))
         addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:[v0]-16-|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": timeZone]))
+        addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:[v0]-16-|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": curTime]))
         
         addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-5-[v0]-3-[v1]", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": cityName, "v1": cityAddrName]))
-        addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-16-[v0]", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": timeZone]))
+        addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-5-[v0]-3-[V1]", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": curTime, "V1": timeZone]))
     }
 }
