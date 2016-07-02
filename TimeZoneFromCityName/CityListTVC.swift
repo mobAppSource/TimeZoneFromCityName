@@ -13,6 +13,19 @@ class CityListTVC: UITableViewController {
     
     var cityNames: [[String]] = []
     private let cellID = "cellID"
+    
+    
+    var timer: NSTimer!
+    var isClockStarted = false
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.timer.invalidate()
+    }
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.setTimer()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()        
         
@@ -24,10 +37,22 @@ class CityListTVC: UITableViewController {
         self.readData()
         self.dispLocTime()
     }
+    
+    func setTimer()
+    {
+        self.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(CityListTVC.updateTime), userInfo: nil, repeats: true)
+    }
+    func updateTime()
+    {
+        dispatch_async(dispatch_get_main_queue()) { 
+            self.tableView.reloadData()
+            self.dispLocTime()
+        }
+    }
 
     func dispLocTime()
     {
-        let locTimeLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 60, height: 20))
+        let locTimeLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 20))
         locTimeLabel.text = getLocalTime()
         locTimeLabel.textAlignment = .Right
         locTimeLabel.font = UIFont.systemFontOfSize(12)
@@ -74,6 +99,13 @@ class CityListTVC: UITableViewController {
     override func tableView(tableView: UITableView, titleForFooterInSection section: Int) -> String? {
         return "Total \(cityNames.count) cities"
     }
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let clockView = AnalogClockVC()
+        clockView.cityName = cityNames[indexPath.row][1]
+        clockView.viewTitle = cityNames[indexPath.row][0]
+        self.navigationController?.pushViewController(clockView, animated: true)
+    }
+    
 
 }
 extension CityListTVC{
