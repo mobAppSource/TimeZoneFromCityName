@@ -7,6 +7,4 @@ target 'TimeZoneFromCityName' do
 
   # Pods for TimeZoneFromCityName
   pod 'BEMAnalogClock'
-
-
 end
